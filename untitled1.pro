@@ -11,15 +11,18 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     menu.cpp \
-    playwidget.cpp \
-    settingwidget.cpp
+    settingwidget.cpp \
+    xogamewidget.cpp
 
 HEADERS += \
     menu.h \
-    playwidget.h \
-    settingwidget.h
+    settingwidget.h \
+    xogamewidget.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+FORMS += \
+    xogamewidget.ui

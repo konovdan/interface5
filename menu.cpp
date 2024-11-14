@@ -1,8 +1,8 @@
 #include "menu.h"
 #include <QPushButton>
 #include <QGridLayout>
-#include "playwidget.h"
 #include "settingwidget.h"
+#include "xogamewidget.h"
 
 Menu::Menu() : QWidget(nullptr){
     play = new QPushButton("Играть", this);
@@ -22,7 +22,7 @@ Menu::Menu() : QWidget(nullptr){
 }
 
 void Menu::playClicked() {
-    PlayWidget* playWidget = new PlayWidget(nullptr);
+    XOGameWidget* playWidget = new XOGameWidget(nullptr);
 
     playWidget->show();
 
