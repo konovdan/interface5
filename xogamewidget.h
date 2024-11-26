@@ -2,18 +2,12 @@
 #define XOGAMEWIDGET_H
 
 #include <QWidget>
-
+#include <QPushButton>
+#include "gamemodel.h"
+#include <QTimer>
 namespace Ui {
 class XOGameWidget;
 }
-
-enum class Player { X, O };
-
-QString player2str(Player player);
-
-Player nextPlayer(Player player);
-
-class QPushButton;
 
 class XOGameWidget : public QWidget {
     Q_OBJECT
@@ -22,15 +16,19 @@ public:
     explicit XOGameWidget(QWidget *parent = nullptr);
     ~XOGameWidget();
 
+
 public slots:
     void onGameButtonClicked();
+    void fieldSizeUpdated();
+    void Win();
+    void showTime();
 
 private:
     Ui::XOGameWidget *ui;
+    void CreateNewField(uint field_size);
+    GameModel model = GameModel();
 
-    Player m_currentPlayer;
 
-    std::vector<std::vector<QPushButton*>> m_buttons;
 };
 
 #endif // XOGAMEWIDGET_H

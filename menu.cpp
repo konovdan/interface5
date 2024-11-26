@@ -3,7 +3,7 @@
 #include <QGridLayout>
 #include "settingwidget.h"
 #include "xogamewidget.h"
-
+#include "statswidget.h"
 Menu::Menu() : QWidget(nullptr){
     play = new QPushButton("Играть", this);
     setting = new QPushButton("Настройки", this);
@@ -19,6 +19,7 @@ Menu::Menu() : QWidget(nullptr){
     connect(play, SIGNAL(clicked(bool)), this, SLOT(playClicked()));
 
     connect(setting, SIGNAL(clicked(bool)), this, SLOT(settingsClicked()));
+    connect(records, SIGNAL(clicked(bool)), this, SLOT(statsClicked()));
 }
 
 void Menu::playClicked() {
@@ -33,6 +34,13 @@ void Menu::settingsClicked() {
     SettingWidget* settingsWidget = new SettingWidget();
 
     settingsWidget->show();
+
+    // this->hide();
+}
+void Menu::statsClicked() {
+    StatsWidget* statsWidget = new StatsWidget();
+
+    statsWidget->show();
 
     // this->hide();
 }

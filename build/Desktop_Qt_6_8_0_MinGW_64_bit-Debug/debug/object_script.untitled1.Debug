@@ -1,0 +1,11 @@
+debug/gamemodel.o
+debug/main.o
+debug/menu.o
+debug/settingwidget.o
+debug/statswidget.o
+debug/xogamewidget.o
+debug/moc_gamemodel.o
+debug/moc_menu.o
+debug/moc_settingwidget.o
+debug/moc_statswidget.o
+debug/moc_xogamewidget.o

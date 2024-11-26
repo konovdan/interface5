@@ -1,0 +1,11 @@
+release/gamemodel.o
+release/main.o
+release/menu.o
+release/settingwidget.o
+release/statswidget.o
+release/xogamewidget.o
+release/moc_gamemodel.o
+release/moc_menu.o
+release/moc_settingwidget.o
+release/moc_statswidget.o
+release/moc_xogamewidget.o

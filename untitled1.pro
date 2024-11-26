@@ -9,14 +9,18 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    gamemodel.cpp \
     main.cpp \
     menu.cpp \
     settingwidget.cpp \
+    statswidget.cpp \
     xogamewidget.cpp
 
 HEADERS += \
+    gamemodel.h \
     menu.h \
     settingwidget.h \
+    statswidget.h \
     xogamewidget.h
 
 # Default rules for deployment.
@@ -25,4 +29,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 FORMS += \
+    statswidget.ui \
     xogamewidget.ui

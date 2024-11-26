@@ -11,7 +11,7 @@ public:
 public slots:
     void playClicked();
     void settingsClicked();
-
+    void statsClicked();
 private:
     QPushButton *play;
     QPushButton *setting;
